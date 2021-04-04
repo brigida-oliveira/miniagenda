@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="container">
+  <h1>Lista de Tarefas</h1>
+  {% if tarefas %}
+    <table class="table table-striped table-responsive">
+      <thead>
+        <tr>
+          <th>Tarefa</th>
+          <th>Descrição</th>
+          <th>Data final</th>
+          <th>Prioridade</th>
+          <th>Categoria</th>
+          <th>Status</th>
+          <th colspan="2" style="text-align:center">Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for t in tarefas %}
+          <tr>
+            <td>{{ t.nome }}</td>
+            <td>{{ t.descricao }}</td>
+            <td>{{ t.data_final }}</td>
+            <td>{{ t.get_prioridade_display }}</td>
+            <td>{{ t.categoria }}</td>
+            <td>{{ t.get_status_display }}</td>
+            <td> <a href="{% url 'tarefas:editar_tarefa' t.id %}" class="btn btn-outline-info btn-sm">Editar</a> </td>
+            <td> <a href="{% url 'tarefas:delete_tarefa' t.id %}" class="btn btn-outline-danger btn-sm">Excluir</a> </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <div class="alert alert-info">
+      <p>Nenhuma tarefa registrada no momento!</p>
+    </div>
+  {% endif %}
+  <a href="{% url 'tarefas:nova_tarefa' %}"> <button type="button" class="btn btn-outline-secondary">Adicionar tarefa</button> </a>
+</div>
+{% endblock body %}

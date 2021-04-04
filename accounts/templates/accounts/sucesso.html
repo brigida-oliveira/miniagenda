@@ -1,0 +1,62 @@
+{% load static %}
+{% load widget_tweaks %}
+
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{% static 'img/favicon.ico' %}">
+
+    <title>Cadastro de novo usuário</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/signin.css' %}" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="/">MiniAgenda</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Cadastro de usuário</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav mr-left">
+          <li class="nav-item">
+            <a href="{% url 'accounts:user_login' %}" class="nav-link">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div id="sucesso">
+        <h3>Cadastro criado com sucesso!</h3>
+      </div>
+      <main role="main">
+        <form class="form-signin" action="" method="post">
+          <p>Por favor faça login.</p>
+          <a href="{% url 'accounts:user_login' %}" class="btn btn-lg btn-info btn-block">Login</a>
+        </form>
+
+      </main>
+
+    </div> <!-- /container -->
+
+  </body>
+  <footer class="footer">
+    <span class="text-muted">&copy; 2017 Brígida F. C. Oliveira</span>
+  </footer>
+</html>

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+
+<div class="row">
+  {% block body %}
+    <h1>Nova Categoria</h1>
+    <form class="" action="" method="post">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="form.nome.id_for_label">Nome:</label>
+        {{ form.nome|add_class:"form-control" }}
+      </div>
+
+      <div class="form-group">
+        <label for="form.descricao.id_for_label">Descrição:</label>
+        {{ form.descricao|add_class:"form-control" }}
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-outline-secondary">Salvar</button>
+      </div>
+
+    </form>
+  {% endblock body %}
+
+</div>

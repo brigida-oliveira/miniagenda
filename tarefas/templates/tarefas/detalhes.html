@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+<div class="container">
+  {% block body %}
+    <h1>Detalhes da Tarefa</h1>
+      <div class="form-group">
+        <label for="">Nome:</label>
+        {{ tarefa.nome }}
+      </div>
+
+      <div class="form-group">
+        <label for="">Descrição:</label>
+        {{ tarefa.descricao }}
+      </div>
+
+      <div class="form-group">
+        <label for="">Data final:</label>
+        {{ tarefa.data_final }}
+      </div>
+
+      <div class="form-group">
+        <label for="">Prioridade:</label>
+        {{ tarefa.get_prioridade_display }}
+      </div>
+
+      <div class="form-group">
+        <label for="">Categoria:</label>
+        {{ tarefa.categoria }}
+      </div>
+  {% endblock body %}
+
+</div>

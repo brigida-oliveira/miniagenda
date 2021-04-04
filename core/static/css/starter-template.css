@@ -1,0 +1,40 @@
+body {
+  padding-top: 5rem;
+  margin-bottom: 60px;
+  padding-bottom: 2rem;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+h1 {
+  padding: 0.5em;
+}
+
+h3 {
+  color: #757575;
+}
+
+.footer {
+  position: absolute;
+  margin-top: 30px;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f0f0f0
+}
+
+.footer a {
+  padding-left: 2em;
+  color: #959595
+}
