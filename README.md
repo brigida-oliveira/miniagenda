@@ -3,4 +3,4 @@
 
 ## Endereço do site: http://simpledatebook.herokuapp.com
 
-Obs: esse código também pode ser encontrado na minha conta mais antiga do Github, onde coloco tudo, desde projetos privados até projetos incompletos, link do projeto nela aqui: https://github.com/bri1409/simpledatebook
+Obs: esse código também pode ser encontrado na minha conta mais antiga do Github, link do projeto nela aqui: https://github.com/bri1409/simpledatebook
